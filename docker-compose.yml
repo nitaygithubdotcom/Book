@@ -4,6 +4,6 @@ services:
         container_name: scrapy
         image: scrapy:latest
         volumes: 
-            ./:/app
+            - ./:/app
         working_dir: /app/books
         command: ["scrapy","crawl","book"]
