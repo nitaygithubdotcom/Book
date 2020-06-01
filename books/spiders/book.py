@@ -32,8 +32,8 @@ class BookSpider(scrapy.Spider):
                 rating = 5
             yield {'Booksname':name, 'Price':price, 'Rating':rating} 
         
-        nextpage = response.xpath('//li[@class="next"]/a/@href').get()
-        # print(nextpage)
-        if nextpage is not None:
-            nextpage = response.urljoin(nextpage)
-            yield scrapy.Request(nextpage, callback=self.parse)
+        # nextpage = response.xpath('//li[@class="next"]/a/@href').get()
+        # # print(nextpage)
+        # if nextpage is not None:
+        #     nextpage = response.urljoin(nextpage)
+        #     yield scrapy.Request(nextpage, callback=self.parse)
